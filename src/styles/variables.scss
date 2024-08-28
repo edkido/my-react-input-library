@@ -1,0 +1,21 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #ccc;
+  --hover-border-color: #999;
+  --focus-border-color: #3498db;
+  --error-color: #e74c3c;
+  --disabled-background-color: #f0f0f0;
+  --disabled-text-color: #a8a8a8;
+}
+
+[data-theme='dark'] {
+  --background-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --border-color: #555555;
+  --hover-border-color: #777777;
+  --focus-border-color: #2980b9;
+  --error-color: #e74c3c;
+  --disabled-background-color: #333333;
+  --disabled-text-color: #666666;
+}

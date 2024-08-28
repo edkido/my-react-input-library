@@ -1,0 +1,104 @@
+@import './variables.scss';
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+
+  &--small {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  &--large {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  &--xlarge {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  &--error {
+    border-color: var(--error-color);
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--error-color), 10%;
+      box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.2);
+    }
+  }
+
+  &--disabled {
+    background-color: var(--disabled-background-color);
+    border-color: var(--border-color);
+    cursor: not-allowed;
+
+    .input-text {
+      background-color: transparent;
+      cursor: not-allowed;
+      color: var(--disabled-text-color);
+    }
+  }
+
+  &:hover {
+    border-color: var(--hover-border-color);
+  }
+
+  &:focus-within {
+    border-color: var(--focus-border-color);
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+  }
+}
+
+.input-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: inherit;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: var(--disabled-text-color);
+    cursor: not-allowed;
+  }
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+
+  &--before {
+    margin-right: 8px;
+  }
+
+  &--after {
+    margin-left: 8px;
+  }
+
+  &--info {
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
