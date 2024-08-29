@@ -14,7 +14,9 @@
     "build-storybook-docs": "storybook build --docs",
     "predeploy-storybook": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "chromatic": "npx chromatic --project-token=chpt_3569b5786d638b2"
+    "chromatic": "npx chromatic --project-token=chpt_3569b5786d638b2",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
