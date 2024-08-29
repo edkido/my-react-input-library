@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import InputGroup from '../components/InputGroup';
 import { FiSearch, FiInfo } from 'react-icons/fi';
@@ -35,6 +36,31 @@ TextInput.args = {
   type: 'text',
   placeholder: 'Enter your username',
 };
+
+// export const TextInput = Template.bind({});
+// TextInput.args = {
+//   ...Default.args,
+//   id: 'username',
+//   label: 'Username',
+//   type: 'text',
+//   placeholder: 'Enter your username',
+// };
+// TextInput.parameters = {
+//   backgrounds: { default: 'dark' },
+// };
+
+// Another story with dark background
+// export const NumberInput = Template.bind({});
+// NumberInput.args = {
+//   ...Default.args,
+//   id: 'age',
+//   label: 'Age',
+//   type: 'number',
+//   placeholder: 'Enter your age',
+// };
+// NumberInput.parameters = {
+//   backgrounds: { default: 'dark' },
+// };
 
 // Number input
 export const NumberInput = Template.bind({});
