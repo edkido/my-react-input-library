@@ -1,26 +1,25 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import PropTypes from 'prop-types';
 import InputLabel from './InputLabel';
 import InputText from './InputText';
 import InputAnnotation from './InputAnnotation';
 import '../styles/InputGroup.scss';
+import { InputGroupProps } from '../types/InputGroupProps';
 
-const InputGroup = ({
+const InputGroup: React.FC<InputGroupProps> = ({
   id,
   label,
-  type,
+  type = 'text',
   value,
   onChange,
   placeholder,
-  required,
-  size,
+  required = false,
+  size = 'medium',
   beforeIcon,
   afterIcon,
   infoIcon,
   helperText,
-  error,
-  disabled,
+  error = false,
+  disabled = false,
 }) => (
   <div className="input-group">
     {label && <InputLabel htmlFor={id}>{label}</InputLabel>}
@@ -41,22 +40,5 @@ const InputGroup = ({
     {helperText && <InputAnnotation message={helperText} type="info" />}
   </div>
 );
-
-InputGroup.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'email', 'number', 'password']),
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
-  beforeIcon: PropTypes.node,
-  afterIcon: PropTypes.node,
-  infoIcon: PropTypes.node,
-  helperText: PropTypes.string,
-  error: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
 
 export default InputGroup;

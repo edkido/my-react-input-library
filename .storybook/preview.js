@@ -11,15 +11,3 @@ const preview = {
 };
 
 export default preview;
-
-// const preview = {
-//   backgrounds: {
-//     default: 'light',
-//     values: [
-//       { name: 'light', value: '#ffffff' },
-//       { name: 'dark', value: '#000000' },
-//     ],
-//   },
-// };
-
-// export default preview;

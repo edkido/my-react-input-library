@@ -1,9 +1,23 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styles/InputText.scss';
 
-const InputText = ({
+interface InputTextProps {
+  id: string
+  type?: 'text' | 'email' | 'number' | 'password';
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  required?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge';
+  beforeIcon?: React.ReactNode;
+  afterIcon?: React.ReactNode;
+  infoIcon?: React.ReactNode;
+  error?: boolean;
+  disabled?: boolean;
+}
+
+const InputText: React.FC<InputTextProps> = ({
+  id,
   type = 'text',
   value,
   onChange,
@@ -16,9 +30,14 @@ const InputText = ({
   error = false,
   disabled = false,
 }) => (
-  <div className={`input-wrapper input-wrapper--${size} ${disabled ? 'input-wrapper--disabled' : ''} ${error ? 'input-wrapper--error' : ''}`}>
+  <div
+    className={`input-wrapper input-wrapper--${size} ${disabled ? 'input-wrapper--disabled' : ''} ${
+      error ? 'input-wrapper--error' : ''
+    }`}
+  >
     {beforeIcon && <span className="input-icon input-icon--before">{beforeIcon}</span>}
     <input
+      id={id}
       type={type}
       value={value}
       onChange={onChange}
@@ -31,19 +50,5 @@ const InputText = ({
     {infoIcon && <span className="input-icon input-icon--info">{infoIcon}</span>}
   </div>
 );
-
-InputText.propTypes = {
-  type: PropTypes.oneOf(['text', 'email', 'number', 'password']),
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
-  beforeIcon: PropTypes.node,
-  afterIcon: PropTypes.node,
-  infoIcon: PropTypes.node,
-  error: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
 
 export default InputText;
