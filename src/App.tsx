@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiInfo, FiMail, FiScissors } from 'react-icons/fi'
 import './App.scss'
 import InputGroup from './components/InputGroup'

@@ -3,7 +3,7 @@ import InputLabel from './InputLabel';
 import InputText from './InputText';
 import InputAnnotation from './InputAnnotation';
 import '../styles/InputGroup.scss';
-import { InputGroupProps } from '../types/InputGroupProps';
+import { InputGroupProps } from '../types/InputGroupProps.tsx';
 
 const InputGroup: React.FC<InputGroupProps> = ({
   id,
