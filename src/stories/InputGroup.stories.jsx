@@ -10,7 +10,6 @@ export default {
 
 const Template = (args) => <InputGroup {...args} />;
 
-// Default input (email)
 export const Default = Template.bind({});
 Default.args = {
   id: 'email',
@@ -27,7 +26,6 @@ Default.args = {
   helperText: 'This is a hint text to help user.',
 };
 
-// Text input
 export const TextInput = Template.bind({});
 TextInput.args = {
   ...Default.args,
@@ -37,32 +35,6 @@ TextInput.args = {
   placeholder: 'Enter your username',
 };
 
-// export const TextInput = Template.bind({});
-// TextInput.args = {
-//   ...Default.args,
-//   id: 'username',
-//   label: 'Username',
-//   type: 'text',
-//   placeholder: 'Enter your username',
-// };
-// TextInput.parameters = {
-//   backgrounds: { default: 'dark' },
-// };
-
-// Another story with dark background
-// export const NumberInput = Template.bind({});
-// NumberInput.args = {
-//   ...Default.args,
-//   id: 'age',
-//   label: 'Age',
-//   type: 'number',
-//   placeholder: 'Enter your age',
-// };
-// NumberInput.parameters = {
-//   backgrounds: { default: 'dark' },
-// };
-
-// Number input
 export const NumberInput = Template.bind({});
 NumberInput.args = {
   ...Default.args,
@@ -72,7 +44,6 @@ NumberInput.args = {
   placeholder: 'Enter your age',
 };
 
-// Password input
 export const PasswordInput = Template.bind({});
 PasswordInput.args = {
   ...Default.args,
@@ -80,11 +51,10 @@ PasswordInput.args = {
   label: 'Password',
   type: 'password',
   placeholder: 'Enter your password',
-  beforeIcon: null, // Optional: No icon before password field
-  afterIcon: null,  // Optional: No icon after password field
+  beforeIcon: null,
+  afterIcon: null,
 };
 
-// Input with error state
 export const ErrorState = Template.bind({});
 ErrorState.args = {
   ...Default.args,
@@ -92,7 +62,6 @@ ErrorState.args = {
   helperText: 'Invalid email address.',
 };
 
-// Disabled input
 export const DisabledState = Template.bind({});
 DisabledState.args = {
   ...Default.args,
@@ -100,21 +69,18 @@ DisabledState.args = {
   helperText: 'Input is disabled.',
 };
 
-// Input with hover state
 export const HoverState = Template.bind({});
 HoverState.args = {
   ...Default.args,
   value: 'Hover to see the effect',
 };
 
-// Input with focus state
 export const FocusState = Template.bind({});
 FocusState.args = {
   ...Default.args,
   value: 'Click to focus',
 };
 
-// Input with different sizes
 export const SmallSize = Template.bind({});
 SmallSize.args = {
   ...Default.args,

@@ -12,6 +12,13 @@ This project is a React component library for customizable input components, inc
 - **Light/Dark Mode**: Theme support to adjust the components based on light or dark mode.
 - **Storybook Documentation**: Interactive component documentation using Storybook.
 
+## Links
+  You can view demo under next link:
+  [DEMO](https://edkido.github.io/my-react-input-library/)
+
+  You can check stories under nexr link:
+  [STORIES](https://1e5c77e--66d066a304b0919bc0eeb410.chromatic.com/?path=/story/components-inputgroup--default)
+
 ## Installation
 
 To use these components in your project, clone the repository and install the dependencies:
